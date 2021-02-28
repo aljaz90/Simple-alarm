@@ -1,0 +1,29 @@
+$color-primary:  #008DD5;
+$color-primary-dark:  darken($color-primary, 10%);
+$color-primary-dark-2:  darken($color-primary, 20%);
+$color-primary-light:  lighten($color-primary, 10%);
+$color-primary-light-2:  lighten($color-primary, 20%);
+
+$color-secondary: #393E41;
+$color-secondary-dark:  darken($color-secondary, 10%);
+$color-secondary-dark-2:  darken($color-secondary, 20%);
+$color-secondary-light:  lighten($color-secondary, 10%);
+$color-secondary-light-2:  lighten($color-secondary, 20%);
+
+$color-success: #3FDB4F;
+$color-info: #2361FF;
+$color-warning: #FFAF02;
+$color-error: #FF263B;
+
+$color-tertiary: #96afb8;
+$color-tertiary-dark: #334a52;
+
+$color-white: #fff;
+$color-white-2: #f4f4f4;
+
+$color-grey: #eee;
+$color-grey-2: #777;
+$color-grey-3: #333;
+
+$font-primary: 'Quicksand', sans-serif;
+$font-heading: 'Raleway', sans-serif;

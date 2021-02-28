@@ -1,0 +1,608 @@
+.animation {
+    &--game--popup {
+        @keyframes showPopup {
+            0% {
+                opacity: 1;  
+                transform: translateY(100%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0); 
+            }
+        }
+          
+        @keyframes hidePopup {
+            0% {
+                opacity: 1;  
+                transform: translateY(0);
+            }
+            100% {
+                opacity: 1;  
+                transform: translateY(100%);    
+            }
+        } 
+
+        &-enter {
+            opacity: 0;
+            animation-duration: .3s;
+            animation-fill-mode: both;
+            animation-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2);
+            animation-play-state: paused;
+
+            &-active {
+                animation-name: showPopup;
+                animation-play-state: running;
+            }
+        }
+        
+        &-appear {
+            opacity: 0;
+            animation-duration: .3s;
+            animation-fill-mode: both;
+            animation-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2);
+            animation-play-state: paused;
+
+            &-active {
+                animation-name: showPopup;
+                animation-play-state: running;
+            }
+        }
+            
+        &-leave {
+            animation-duration: .2s;
+            animation-fill-mode: both;
+            animation-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2);
+            animation-play-state: paused;
+
+            &-active {
+                animation-name: hidePopup;
+                animation-play-state: running;
+            }
+        }            
+    }
+
+    &--trainer {
+        @keyframes showTrainerOptions {
+            0% {
+                opacity: 0;  
+                transform: translateY(-5rem);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0); 
+            }
+        }
+          
+        @keyframes hideTrainerOptions {
+            0% {
+                opacity: 1;  
+                transform: translateY(0);
+            }
+            100% {
+                opacity: 0;  
+                transform: translateY(-5rem);    
+            }
+        } 
+
+        &-enter {
+            opacity: 0;
+            animation-duration: .3s;
+            animation-fill-mode: both;
+            animation-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2);
+            animation-play-state: paused;
+
+            &-active {
+                animation-name: showTrainerOptions;
+                animation-play-state: running;
+            }
+        }
+            
+        &-leave {
+            animation-duration: .2s;
+            animation-fill-mode: both;
+            animation-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2);
+            animation-play-state: paused;
+
+            &-active {
+                animation-name: hideTrainerOptions;
+                animation-play-state: running;
+            }
+        }            
+    }
+
+    &--game--mistake {
+        @keyframes showMistakeDescription {
+            0% {
+                //opacity: 1;  
+                transform: scaleY(0);
+            }
+            100% {
+                //opacity: 1;
+                transform: scaleY(1); 
+            }
+        }
+          
+        @keyframes hideMistakeDescription {
+            0% {
+                //opacity: 1;  
+                transform: scaleY(1);
+            }
+            100% {
+                //opacity: 1;  
+                transform: scaleY(0);    
+            }
+        } 
+
+        &-enter {
+            transform: scaleY(0);
+            animation-duration: .3s;
+            animation-fill-mode: both;
+            animation-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2);
+            animation-play-state: paused;
+
+            &-active {
+                animation-name: showMistakeDescription; 
+                animation-play-state: running;
+            }
+        }
+        
+        &-appear {
+            transform: scaleY(0);
+            animation-duration: .3s;
+            animation-fill-mode: both;
+            animation-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2);
+            animation-play-state: paused;
+
+            &-active {
+                animation-name: showMistakeDescription;
+                animation-play-state: running;
+            }
+        }
+            
+        &-leave {
+            animation-duration: .2s;
+            animation-fill-mode: both;
+            animation-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2);
+            animation-play-state: paused;
+
+            &-active {
+                animation-name: hideMistakeDescription;
+                animation-play-state: running;
+            }
+        }        
+    }
+    
+    &--training--options {
+        @keyframes showTrainingOptions {
+            0% {
+                transform: translateX(-10rem);
+                opacity: 0;
+            }
+            80% {
+                opacity: 0;
+            }            
+            100% {
+                transform: translateX(0);
+                opacity: 1; 
+            }
+        }
+          
+        @keyframes hideTrainingOptions {
+            0% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateX(10rem);
+                opacity: 0;   
+            }
+        } 
+
+        &-enter {
+            animation: showTrainingOptions 0.3s cubic-bezier(0.55, 0, 0.55, 0.2) 1;
+        }
+        
+        &-leave {
+            animation: hideTrainingOptions 0.2s cubic-bezier(0.55, 0, 0.55, 0.2) 1;
+        }        
+    }
+
+    &--lesson--slide {
+        @keyframes showLessonSlide {
+            0% {
+                transform: translateX(5rem);
+                opacity: 0;
+            }
+            60% {
+                opacity: 0;
+            }            
+            100% {
+                transform: translateX(0);
+                opacity: 1; 
+            }
+        }
+          
+        @keyframes hideLessonSlide {
+            0% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateX(-5rem);
+                opacity: 0;   
+            }
+        } 
+
+        &-enter {
+            animation: showLessonSlide 0.3s cubic-bezier(0.61, 1, 0.88, 1) 1;
+            
+        }
+        
+        &-leave {
+            animation: hideLessonSlide 0.2s cubic-bezier(0.61, 1, 0.88, 1) 1;
+        }
+        
+        &--left {
+            @keyframes showLessonSlideLeft {
+                0% {
+                    transform: translateX(-5rem);
+                    opacity: 0;
+                }
+                80% {
+                    opacity: 0;
+                }            
+                100% {
+                    transform: translateX(0);
+                    opacity: 1; 
+                }
+            }
+              
+            @keyframes hideLessonSlideLeft {
+                0% {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+                100% {
+                    transform: translateX(5rem);
+                    opacity: 0;   
+                }
+            } 
+    
+            &-enter {
+                animation: showLessonSlideLeft 0.3s cubic-bezier(0.61, 1, 0.88, 1) 1;
+            }
+            
+            &-leave {
+                animation: hideLessonSlideLeft 0.2s cubic-bezier(0.61, 1, 0.88, 1) 1;
+            }
+
+        }
+    }
+
+    &--dropdown {
+        &--bottom {
+            @keyframes showDropdownBottom {
+                0% { opacity: 0; transform: translate(-50%, calc(100% - 0rem)); }
+                100% { opacity: 1; transform: translate(-50%, calc(100% + 1rem)); }
+            }
+            @keyframes hideDropdownBottom {
+                0% { opacity: 1; transform: translate(-50%, calc(100% + 1rem)); }
+                100% { opacity: 0; transform: translate(-50%, calc(100% - 0rem)); }
+            }
+
+            &-enter {
+                animation: showDropdownBottom 0.1s linear 1;
+            }
+            
+            &-leave {
+                animation: hideDropdownBottom 0.1s linear 1;
+            }
+        }
+        
+        &--top {
+            @keyframes showDropdownTop {
+                0% { opacity: 0; transform: translate(-50%, calc(-100% - 0rem)); }
+                100% { opacity: 1; transform: translate(-50%, calc(-100% - 1rem)); }
+            }
+            @keyframes hideDropdownTop {
+                0% { opacity: 1; transform: translate(-50%, calc(-100% - 1rem)); }
+                100% { opacity: 0; transform: translate(-50%, calc(-100% - 0rem)); }
+            }
+
+            &-enter {
+                animation: showDropdownTop 0.1s linear 1;
+            }
+            
+            &-leave {
+                animation: hideDropdownTop 0.1s linear 1;
+            }
+        }
+        
+        &--right {
+            @keyframes showDropdownRight {
+                0% { opacity: 0; transform: translate(calc(100% + 0rem), 50%); }
+                100% { opacity: 1; transform: translate(calc(100% + 1rem), 50%); }
+            }
+            @keyframes hideDropdownRight {
+                0% { opacity: 1; transform: translate(calc(100% + 1rem), 50%); }
+                100% { opacity: 0; transform: translate(calc(100% + 0rem), 50%); }
+            }
+
+            &-enter {
+                animation: showDropdownRight 0.1s linear 1;
+            }
+            
+            &-leave {
+                animation: hideDropdownRight 0.1s linear 1;
+            }
+        }
+
+        &--left {
+            @keyframes showDropdownLeft {
+                0% { opacity: 0; transform: translate(calc(-100% - 0rem), 50%); }
+                100% { opacity: 1; transform: translate(calc(-100% - 1rem), 50%); }
+            }
+            @keyframes hideDropdownLeft {
+                0% { opacity: 1; transform: translate(calc(-100% - 1rem), 50%); }
+                100% { opacity: 0; transform: translate(calc(-100% - 0rem), 50%); }
+            }
+
+            &-enter {
+                animation: showDropdownLeft 0.1s linear 1; 
+            }
+            
+            &-leave {
+                animation: hideDropdownLeft 0.1s linear 1;
+            }
+        }
+    
+    }
+
+    &--fadeInOut {
+        @keyframes fadeIn {
+            0% {opacity: 0;}
+            100% {opacity: 1;}
+        }
+        @keyframes fadeOut {
+            0% {opacity: 1;}
+            100% {opacity: 0;} 
+        }
+
+        &-enter {
+            animation: fadeIn 0.3s cubic-bezier(0.61, 1, 0.88, 1) 1;
+        }
+        
+        &-leave {
+            animation: fadeOut 0.2s cubic-bezier(0.61, 1, 0.88, 1) 1;
+        }
+    }
+    
+    &--advancedOptions {
+        @keyframes showAdvancedOptions {
+            from {
+                min-height: 0;
+            }
+            to {
+                min-height: 45rem;
+            }   
+        }
+        @keyframes hideAdvancedOptions {
+            from {
+                min-height: 45rem;
+            }
+            to {
+                min-height: 0;
+            }
+        }
+
+        &-enter {
+            animation: showAdvancedOptions 0.3s cubic-bezier(0.61, 1, 0.88, 1) 1;
+        }
+        
+        &-leave {
+            animation: hideAdvancedOptions 0.2s cubic-bezier(0.61, 1, 0.88, 1) 1;
+        }
+    }
+    
+    &--test {
+        @keyframes fadeIn {
+            0% {opacity: 0;}
+            100% {opacity: 1;}
+        }
+        @keyframes fadeOut {
+            0% {opacity: 1;}
+            100% {opacity: 0;}
+        }
+
+        &-enter {
+            animation: fadeIn 0.3s cubic-bezier(0.55, 0, 0.55, 0.2) 1;
+        }
+        
+        &-leave {
+            animation: fadeOut 0.2s cubic-bezier(0.55, 0, 0.55, 0.2) 1;
+        }
+    }
+
+    &--progress_bar {
+        @keyframes progressBarLoad {
+            from {
+                width: 0%;
+            }
+            to {
+                width: 100%;
+            }
+        }
+        animation: progressBarLoad 0.6s cubic-bezier(0.61, 1, 0.88, 1) 1;
+    }
+
+    &--sidebar--my_courses {
+        @keyframes showSidebarMyCourses {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+          
+        @keyframes hideSidebarMyCourses {
+            0% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+            60% {
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+        } 
+
+        &-enter {
+            transform: translateX(-100%);
+            animation-duration: 0.3s;
+            animation-fill-mode: both;
+            animation-timing-function: cubic-bezier(0.61, 1, 0.88, 1);
+            animation-play-state: paused;
+
+            &-active {
+                animation-name: showSidebarMyCourses; 
+                animation-play-state: running;
+            }
+        }
+            
+        &-leave {
+            animation-duration: 0.3s;
+            animation-fill-mode: both;
+            animation-timing-function: cubic-bezier(0.61, 1, 0.88, 1);
+            animation-play-state: paused;
+
+            &-active {
+                animation-name: hideSidebarMyCourses;
+                animation-play-state: running;
+            }
+        } 
+    }
+
+    &--sidebar--mobile {
+        @keyframes showSidebarMyCourses {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+          
+        @keyframes hideSidebarMyCourses {
+            0% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+            60% {
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+        } 
+
+        &-enter {
+            transform: translateX(-100%);
+            animation-duration: 0.3s;
+            animation-fill-mode: both;
+            animation-timing-function: cubic-bezier(0.61, 1, 0.88, 1);
+            animation-play-state: paused;
+
+            &-active {
+                animation-name: showSidebarMyCourses; 
+                animation-play-state: running;
+            }
+        }
+                    
+        &-leave {
+            animation-duration: 0.3s;
+            animation-fill-mode: both;
+            animation-timing-function: cubic-bezier(0.61, 1, 0.88, 1);
+            animation-play-state: paused;
+
+            &-active {
+                animation-name: hideSidebarMyCourses;
+                animation-play-state: running;
+            }
+        } 
+    }
+
+    &--scroll_icon {
+        @keyframes scrollIconUpdown {
+            0% {
+                -webkit-transform: translate(0, 0);
+                transform: translate(0, 0)
+            }
+            50% {
+                -webkit-transform: translate(0, 5px);
+                transform: translate(0, 5px)
+            }
+            100% {
+                -webkit-transform: translate(0, 0);
+                transform: translate(0, 0)
+            }
+        }
+    }
+
+    &--lesson--navigation {
+        @keyframes showLessonNavigation {
+            0% {
+                transform: translateY(-100%) translateX(-50%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0) translateX(-50%);
+                opacity: 1;
+            }
+        }
+          
+        @keyframes hideLessonNavigation {
+            0% {
+                transform: translateY(0) translateX(-50%);
+                opacity: 1;
+            }
+            60% {
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(-100%) translateX(-50%);
+                opacity: 0;
+            }
+        } 
+
+        &-enter {
+            animation-duration: 0.3s;
+            animation-fill-mode: both;
+            animation-timing-function: cubic-bezier(0.61, 1, 0.88, 1);
+            animation-name: showLessonNavigation; 
+
+            &-active {
+                animation-play-state: running;
+            }
+        }
+            
+        &-leave {
+            animation-duration: 0.3s;
+            animation-fill-mode: both;
+            animation-timing-function: cubic-bezier(0.61, 1, 0.88, 1);
+            animation-name: hideLessonNavigation;
+
+            &-active {
+                animation-play-state: running;
+            }
+        } 
+    }
+}
+ 

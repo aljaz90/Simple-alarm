@@ -1,0 +1,126 @@
+.events {
+    grid-column: full-start / full-end;
+    grid-row: 2 / -1;
+    background-color: $color-white;
+    margin: 2rem;
+    border-radius: 4px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    position: relative;
+    max-height: 88vh;
+
+
+    &--header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 10rem;
+        background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark-2);
+        color: $color-white;
+        font-size: 3.6rem;
+        font-family: $font-heading;
+        letter-spacing: 1px;
+        user-select: none;
+        font-weight: 300;
+
+        &--icon {
+            margin-right: 2rem;
+            margin-left: -2rem;
+        }
+    }
+
+    &--nav {
+        display: flex;
+        justify-content: center;
+        padding: 1rem 0 0 0;
+        border-bottom: 1px solid $color-grey;
+
+        &--nav {
+            .switch--option-nav {
+                font-size: 1.8rem;
+            }
+        }
+    }
+
+    &--container {
+        display: flex;
+        flex-direction: column;
+        padding: 2rem 5rem;
+        max-height: calc(90vh - 17.7rem);
+        overflow-y: auto;
+
+        &-chart {
+            display: flex;
+            justify-content: center;
+            height: 100%;
+            padding: 2rem 5rem;
+            
+            div div {
+                display: flex;
+                justify-content: center;
+                margin-right: -8rem;
+                cursor: pointer;
+            }
+        }
+    }
+
+    &--event {
+        display: flex;
+        width: 100%;
+        padding: 1.5rem 1rem;
+        font-size: 1.6rem;
+        cursor: pointer;
+        user-select: none;
+        transition: all .3s;
+
+        &-filler {
+            min-height: 2rem;
+        }
+
+        &:hover {
+            background-color: $color-white-2;
+        }
+
+        &-important {
+            color: $color-error;
+            font-weight: 600;
+        }
+
+        &:not(:last-child) {
+            border-bottom: 1px solid $color-grey;               
+        }
+        
+        &--type {
+            width: 15%;
+            font-weight: 400;
+            
+            &-important {
+                color: $color-error;
+                font-weight: 600;
+            }
+
+            &--icon {
+                margin-right: 1rem;
+            }
+        }
+
+        &--sensor {
+            width: 55%;
+            padding-left: 2rem;
+
+            &--title {
+                font-weight: 400;
+            }
+        }
+
+        &--date {
+            width: 30%;
+            padding-right: 1rem;
+            text-align: right;
+        }
+    }
+
+}
